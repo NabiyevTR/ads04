@@ -5,6 +5,9 @@ public interface LinkedList<E> extends Iterable<E>{
     void insertFirst(E value);
 
     E removeFirst();
+
+    E getFirst();
+
     boolean remove(E value);
 
     boolean contains(E value);
@@ -15,9 +18,6 @@ public interface LinkedList<E> extends Iterable<E>{
 
     void display();
 
-    E getFirst();
-
-    Node<E> getFirstElement();
 
     class Node<E> {
         E item;

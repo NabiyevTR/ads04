@@ -92,11 +92,6 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
     }
 
     @Override
-    public Node<E> getFirstElement() {
-        return firstElement;
-    }
-
-    @Override
     public void forEach(Consumer<? super E> action) {
     //todo
     }
@@ -127,4 +122,6 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         System.out.println(this.toString());
         System.out.println("------------------------------------");
     }
+
+
 }
