@@ -152,5 +152,4 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         System.out.println("------------------------------------");
     }
 
-
 }
