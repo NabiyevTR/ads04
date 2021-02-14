@@ -1,12 +1,14 @@
 package ru.geekbrains.ntr_ads04.library;
 
 import java.util.Iterator;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class SimpleLinkedListImpl<E> implements LinkedList<E> {
 
     protected int size;
     protected Node<E> firstElement;
+
 
     @Override
     public void insertFirst(E value) {
@@ -91,15 +93,42 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         return firstElement.item;
     }
 
-    @Override
+   /* @Override
     public void forEach(Consumer<? super E> action) {
-    //todo
-    }
+        Objects.requireNonNull(action);
+        for (E e : this) {
+            action.accept(e);
+        }
+    }*/
 
     @Override
     public Iterator<E> iterator() {
-        //todo
-        return null;
+        Iterator<E> iterator = new Iterator<E>() {
+
+            private Node<E> currentElement = firstElement;
+            private boolean first =false;
+
+            @Override
+            public boolean hasNext() {
+                if (isEmpty()) {
+                    return false;
+                } else {
+                    return currentElement.next != null;
+                }
+
+            }
+
+            @Override
+            public E next() {
+                if (!first) {
+                    first = true;
+                } else {
+                    currentElement = currentElement.next;
+                }
+                return currentElement.item;
+            }
+        };
+        return iterator;
     }
 
     @Override

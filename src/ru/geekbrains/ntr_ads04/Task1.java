@@ -5,7 +5,7 @@ import ru.geekbrains.ntr_ads04.library.*;
 public class Task1 {
     public static void main(String[] args) {
 
-        //SimpleLinkedListImpl
+        //Simple linked list
         LinkedList<Integer> simpleLinkedList = new SimpleLinkedListImpl<>();
         simpleLinkedList.insertFirst(5);
         simpleLinkedList.insertFirst(4);
@@ -20,7 +20,7 @@ public class Task1 {
         simpleLinkedList.removeFirst();
         simpleLinkedList.display(); //[3, 4, 5]
 
-        //
+        //Linked list
         TwoSideLinkedList<Integer> twoSideLinkedList = new TwoSideLinkedListImpl<>();
         twoSideLinkedList.insertFirst(3);
         twoSideLinkedList.insertFirst(2);
@@ -38,7 +38,7 @@ public class Task1 {
         twoSideLinkedList.display(); //[2, 3, 2]
         System.out.println(twoSideLinkedList.getLast());//2
 
-
+        // Stack
         Stack<Integer>stack = new StackImpl<>();
         stack.push(1);
         stack.push(2);
@@ -51,6 +51,7 @@ public class Task1 {
             System.out.println(stack.pop());
         }
 
+        //Deque
         Deque<Integer> deque = new DequeImpl<>();
         deque.addFirst(1);
         deque.addFirst(2);
