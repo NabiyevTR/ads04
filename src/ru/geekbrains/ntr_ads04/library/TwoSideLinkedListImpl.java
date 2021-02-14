@@ -11,11 +11,20 @@ public class TwoSideLinkedListImpl<E> implements TwoSideLinkedList<E> {
 
     @Override
     public void insertFirst(E value) {
-        firstElement = new Node<>(value, null, firstElement);
+        Node<E> entry = new Node<>(value, null, firstElement);
+        if (isEmpty()) {
+            firstElement = entry;
+        } else {
+            firstElement.previous = entry;
+            firstElement = entry;
+        }
+
         size++;
+
         if (size == 1) {
             lastElement = firstElement;
         }
+
 
     }
 

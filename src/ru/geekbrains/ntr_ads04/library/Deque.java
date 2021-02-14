@@ -32,4 +32,6 @@ public interface Deque<E> {
     boolean removeFirstOccurrence(E obj);
 
     boolean removeLastOccurrence(E obj);
+
+    void display();
 }

@@ -51,5 +51,11 @@ public class Task1 {
             System.out.println(stack.pop());
         }
 
+        Deque<Integer> deque = new DequeImpl<>();
+        deque.addFirst(1);
+        deque.addFirst(2);
+        deque.pollLast(); //todo
+        deque.display();
+
     }
 }
